@@ -6,7 +6,7 @@ class empleadoController{
     private $model;
     
     public function __CONSTRUCT(){
-        $this->model = new empleado();
+        $this->model = new Empleado();
     }
     
     public function Index(){
@@ -14,16 +14,16 @@ class empleadoController{
     }
     
     public function Crud(){
-        $emp = new empleado();
+        $emp = new Empleado();
         
         if(isset($_REQUEST['id'])){
-            $emp = $this->model->ObtenerEmpleado($_REQUEST['id']);
+            $emp = $this->model->obtenerEmpleado($_REQUEST['id']);
         }
         require_once 'views/empleado-editar.php';
     }
     
     public function GuardarEmpleado(){
-        $emp = new empleado();
+        $emp = new Empleado();
 
         $emp->id = $_REQUEST['id'];
         $emp->identificacion = $_REQUEST['identificacion'];
@@ -37,14 +37,14 @@ class empleadoController{
         $emp->estado = $_REQUEST['estado'];
 
         $emp->id > 0 
-            ? $this->model->ActualizarEmpleado($emp)
-            : $this->model->RegistrarEmpleado($emp);
+            ? $this->model->actualizarEmpleado($emp)
+            : $this->model->registrarEmpleado($emp);
         
         header('Location: index.php');
     }
     
     public function EliminarEmpleado(){
-        $this->model->EliminarEmpleado($_REQUEST['id']);
+        $this->model->eliminarEmpleado($_REQUEST['id']);
         header('Location: index.php');
     }
 }

@@ -1,6 +1,7 @@
 <?php
-class empleado 
-{
+require_once 'bd.php';
+
+class Empleado extends BD {
 	private $php_mvc;
     public $id;
     public $identificacion;
@@ -13,34 +14,27 @@ class empleado
 	public $fechanacimiento;
 	public $estado;
 
-	public function __CONSTRUCT()
-	{
-		try
-		{
-			$this->pdo = basedatos::Conectar();
-		}
-		catch(Exception $e)
-		{
-			die($e->getMessage());
-		}
-	}
+	public function __CONSTRUCT() {
+        try{
+			parent::__CONSTRUCT();
+        } catch(PDOException $e){ 
+            print "¡Error!: " . $e->getMessage() . "<br/>";
+            die();
+        }
+    }
 	
-	public function ListarEmpleados()
-	{
-		try
-		{
+	public function listarEmpleados() {
+		try {
 			$result = array();
 			$stm = $this->pdo->prepare("SELECT * FROM php_mvc.empleado");
 			$stm->execute();
 			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-		catch(Exception $e)
-		{
+		} catch(Exception $e) {
 			die($e->getMessage());
 		}
 	}
-	
-	public function ObtenerEmpleado($idEmpleado)
+
+	public function obtenerEmpleado($idEmpleado)
 	{
 		try
 		{
@@ -53,7 +47,7 @@ class empleado
 		}
 	}
 	
-	public function EliminarEmpleado($idEmpleado)
+	public function eliminarEmpleado($idEmpleado)
 	{
 		try
 		{
@@ -67,7 +61,7 @@ class empleado
 		}
 	}
 	
-	public function ActualizarEmpleado($data)
+	public function actualizarEmpleado($data)
 	{
 		try
 		{
@@ -103,7 +97,7 @@ class empleado
 		}
 	}
 	
-	public function RegistrarEmpleado(empleado $data)
+	public function registrarEmpleado(empleado $data)
 	{
 		try
 		{
@@ -128,5 +122,7 @@ class empleado
 			die($e->getMessage());
 		}
 	}
+	
+	
 }
 ?>

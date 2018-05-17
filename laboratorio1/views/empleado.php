@@ -18,11 +18,10 @@
             <th>Estado</th>          
             <th style="width:60px;"></th>
             <th style="width:60px;"></th>
-
         </tr>
     </thead>
     <tbody>
-    <?php foreach($this->model->ListarEmpleados() as $r): ?>
+    <?php foreach($this->model->listarEmpleados() as $r): ?>
         <tr>
             <td><?php echo $r->identificacion; ?></td>
             <td><?php echo $r->nombres; ?></td>

@@ -24,14 +24,14 @@
     
     <div class="form-group">
         <label>Apellido</label>
-        <input type="text" name="apellidos" value="<?php echo $emp->apellidos; ?>" class="form-control" placeholder="Ingrese su apellido" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="apellidos" value="<?php echo $emp->apellidos; ?>" class="form-control" placeholder="Ingrese su apellido" data-validacion-tipo="requerido|min:3" />
     </div>
-
 
     <div class="form-group">
         <label>Sueldo</label>
-        <input type="text" name="sueldo" value="<?php echo $emp->sueldo; ?>" class="form-control" placeholder="Ingrese el sueldo" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="sueldo" value="<?php echo $emp->sueldo; ?>" class="form-control" placeholder="Ingrese el sueldo" data-validacion-tipo="requerido|min:5" />
     </div>
+    
     <div class="form-group">
         <label>Dirección</label>
         <input type="text" name="direccion" value="<?php echo $emp->direccion; ?>" class="form-control" placeholder="Ingrese su dirección" data-validacion-tipo="requerido|min:10" />
@@ -43,14 +43,14 @@
     </div>
 
     <div class="form-group">
-    <label>Fecha de Ingreso</label>
-    <input readonly type="text" name="fechaingreso" value="<?php echo $emp->fechaingreso; ?>" class="form-control datepicker" placeholder="Ingrese su fecha de ingreso" data-validacion-tipo="requerido" />
-</div>
+        <label>Fecha de Ingreso</label>
+        <input readonly type="text" name="fechaingreso" value="<?php echo $emp->fechaingreso; ?>" class="form-control datepicker" placeholder="Ingrese su fecha de ingreso" data-validacion-tipo="requerido" />
+    </div>
 
-<div class="form-group">
-<label>Fecha de Nacimiento</label>
-<input readonly type="text" name="fechanacimiento" value="<?php echo $emp->fechanacimiento; ?>" class="form-control datepicker" placeholder="Ingrese su fecha de nacimiento" data-validacion-tipo="requerido" />
-</div>
+    <div class="form-group">
+        <label>Fecha de Nacimiento</label>
+        <input readonly type="text" name="fechanacimiento" value="<?php echo $emp->fechanacimiento; ?>" class="form-control datepicker" placeholder="Ingrese su fecha de nacimiento" data-validacion-tipo="requerido" />
+    </div>
     
     <div class="form-group">
         <label>Estado</label>
@@ -59,8 +59,6 @@
             <option <?php echo $emp->estado == 0 ? 'selected' : ''; ?> value="0">Inactivo</option>
         </select>
     </div>
-    
-   
     
     <hr />
     
