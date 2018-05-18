@@ -17,8 +17,8 @@
             <th style="font-size:80%;">Dirección</th>
             <th style="font-size:80%;">Sueldo</th>
             <th style="font-size:80%;">Correo Electrónico</th>
-            <th style="width:80px; font-size:70%;">Fecha Ingreso</th>
-            <th style="width:80px; font-size:70%;">Fecha Nacimiento</th>
+            <th style="width:80px; font-size:75%;">Fecha Ingreso</th>
+            <th style="width:80px; font-size:75%;">Fecha Nacimiento</th>
             <th style="font-size:80%;">Estado</th>          
             <th style="font-size:80%;"></th>
             <th style="font-size:80%;"></th>
