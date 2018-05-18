@@ -26,17 +26,17 @@
         </tr>
     </thead>
     <tbody>
-    <?php foreach($this->model->ListarEmpleados() as $r): ?>
+    <?php foreach($this->model->listarEmpleados() as $r): ?>
         <tr>
-            <td style="color:#456789;font-size:70%;"><?php echo $r->identificacion; ?></td>
-            <td style="color:#456789;font-size:70%;"><?php echo $r->nombres; ?></td>
-            <td style="color:#456789;font-size:70%;"><?php echo $r->apellidos; ?></td>            
-            <td style="color:#456789;font-size:70%;"><?php echo $r->direccion; ?></td>
-            <td style="color:#456789;font-size:70%;"><?php echo $r->sueldo; ?></td>
-            <td style="color:#456789;font-size:70%;"><?php echo $r->correo; ?></td>
-            <td style="color:#456789;font-size:70%;"><?php echo $r->fechaingreso; ?></td>
-            <td style="color:#456789;font-size:70%;"><?php echo $r->fechanacimiento; ?></td>
-            <td style="color:#456789;font-size:70%;"><?php echo $r->estado == 1 ? 'Activo' : 'Inactivo'; ?></td>
+            <td style="font-size:70%;"><?php echo $r->identificacion; ?></td>
+            <td style="font-size:70%;"><?php echo $r->nombres; ?></td>
+            <td style="font-size:70%;"><?php echo $r->apellidos; ?></td>            
+            <td style="font-size:70%;"><?php echo $r->direccion; ?></td>
+            <td style="font-size:70%;"><?php echo $r->sueldo; ?></td>
+            <td style="font-size:70%;"><?php echo $r->correo; ?></td>
+            <td style="font-size:70%;"><?php echo $r->fechaingreso; ?></td>
+            <td style="font-size:70%;"><?php echo $r->fechanacimiento; ?></td>
+            <td style="font-size:70%;"><?php echo $r->estado == 1 ? 'Activo' : 'Inactivo'; ?></td>
             <td>
                 <a style="font-size:60%;" href="?c=empleado&a=Crud&id=<?php echo $r->id; ?>" class="btn btn-success btn-sm">Editar</a>
             </td>
