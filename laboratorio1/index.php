@@ -5,16 +5,16 @@
         
         <meta charset="utf-8" />
         
-        <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+       
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	</head>
     <body>
-
-
     <div class="container">  
-  
+ 
+ <div class="alert alert-primary"><h3>Administración de Empleados</h3></div>
+
     <?php
 
 $controller = 'empleado';
